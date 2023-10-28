@@ -12,7 +12,7 @@ namespace SpendingBot.Controllers
         [HttpPost]
         public async Task Post()
         {
-            await 
+             
         }
     }
 }
