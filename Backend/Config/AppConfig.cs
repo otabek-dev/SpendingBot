@@ -13,8 +13,9 @@ namespace SpendingBot.Config
             //});
             //.SetHandlerLifetime(TimeSpan.FromMinutes(5));
 
-            services.AddSingleton<ITelegramBotClient, TelegramBotClient>();
-
+            services.AddSingleton<ITelegramBotClient>(x => {
+                return new TelegramBotClient(configuration["BotToken"]);
+            });
 
         }
 
