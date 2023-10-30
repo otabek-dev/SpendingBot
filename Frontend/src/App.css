@@ -19,3 +19,11 @@ body {
     padding: 10px 20px;
     align-content: flex-start;
 }
+
+.elements {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-top: var(--tg-theme-button-color) solid 1px;
+}

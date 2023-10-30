@@ -3,6 +3,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {log10} from "chart.js/helpers";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -72,8 +73,15 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Pie data={chartData} />
+    <div className='container'>
+      <Pie data={chartData} style={{marginBottom: '30px'}}/>
+
+      {chartData.labels.map((label , index) => (
+          <div className='elements' key={index}>
+            <span>{label}</span>
+            <span>{chartData.datasets[0].data[index]} UZS</span>
+          </div>
+      ))}
     </div>
   )
 }
