@@ -3,7 +3,6 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {log10} from "chart.js/helpers";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -22,7 +21,7 @@ function App() {
   });
 
   useEffect(() => {
-    axios.get('https://31c7-194-93-24-99.ngrok-free.app/get-spendings', {
+    axios.get('https://e5c7-194-93-24-99.ngrok-free.app/get-spendings', {
       headers: {
         "ngrok-skip-browser-warning": "6024"
       }})
