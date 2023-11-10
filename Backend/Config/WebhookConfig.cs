@@ -19,8 +19,6 @@ namespace SpendingBot.Config
             botClient = telegramBotClient;
         }
 
-
-
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             //using var scope = _serviceProvider.CreateScope();

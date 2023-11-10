@@ -26,4 +26,4 @@ app.MapControllers();
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
-app.Run();
+app.Run("http://*:9999");
