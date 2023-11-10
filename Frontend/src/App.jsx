@@ -5,8 +5,10 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
+const tg = window.Telegram.WebApp;
 function App() {
+  tg.enableClosingConfirmation();
+  tg.expand();
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [
