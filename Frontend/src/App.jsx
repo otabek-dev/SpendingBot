@@ -23,7 +23,7 @@ function App() {
   });
 
   useEffect(() => {
-    axios.get('https://e5c7-194-93-24-99.ngrok-free.app/get-spendings', {
+    axios.get('https://spending.drugstorebot.space/get-spendings', {
       headers: {
         "ngrok-skip-browser-warning": "6024"
       }})
